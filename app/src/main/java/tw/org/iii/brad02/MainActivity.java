@@ -24,5 +24,14 @@ public class MainActivity extends AppCompatActivity {
         webview.setWebViewClient(client);
         webview.loadUrl("http://www.iii.org.tw/");
     }
+    public void prev(View v){
+        webview.goBack();
+    }
+    public void next(View v){
+        webview.goForward();
+    }
+    public void reload(View v){
+        webview.reload();
+    }
 
 }
