@@ -1,3 +1,12 @@
+<script>
+    function click1(){
+        var here = document.getElementById('here');
+        here.innerHTML = parseInt(Math.random()*49+1);
+    }
+</script>
 <h1 style="background-color:#ff0">Brad Big Company</h1>
 <hr>
 Hello, World
+<hr>
+<input type="button" value="click" onclick="click1()" />
+<div id="here"></div>
