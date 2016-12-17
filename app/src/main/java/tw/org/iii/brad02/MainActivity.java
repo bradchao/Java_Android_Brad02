@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private void initWebView(){
         WebViewClient client = new WebViewClient();
         webview.setWebViewClient(client);
-        webview.loadUrl("http://www.iii.org.tw/");
+        webview.loadUrl("file:///android_asset/brad.html");
     }
     public void prev(View v){
         webview.goBack();
