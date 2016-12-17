@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webview;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initWebView(){
+        WebViewClient client = new WebViewClient();
+        webview.setWebViewClient(client);
         webview.loadUrl("http://www.iii.org.tw/");
     }
 
