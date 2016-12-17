@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -22,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private void initWebView(){
         WebViewClient client = new WebViewClient();
         webview.setWebViewClient(client);
+
+        WebSettings settings = webview.getSettings();
+        settings.setJavaScriptEnabled(true);
+
         webview.loadUrl("file:///android_asset/brad.html");
     }
     public void prev(View v){
