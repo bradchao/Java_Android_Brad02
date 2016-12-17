@@ -15,6 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         webview = (WebView)findViewById(R.id.webview);
-
+        initWebView();
     }
+
+    private void initWebView(){
+        webview.loadUrl("http://www.iii.org.tw/");
+    }
+
 }
