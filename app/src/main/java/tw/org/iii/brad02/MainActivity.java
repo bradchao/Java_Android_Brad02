@@ -38,5 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void reload(View v){
         webview.reload();
     }
-
+    public void lottery(View v){
+        webview.loadUrl("javascript:click1()");
+    }
 }
