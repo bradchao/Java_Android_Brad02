@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         WebSettings settings = webview.getSettings();
         settings.setJavaScriptEnabled(true);
 
+        webview.addJavascriptInterface(new BradJS(), "myjs");
+
         webview.loadUrl("file:///android_asset/brad.html");
 
     }
