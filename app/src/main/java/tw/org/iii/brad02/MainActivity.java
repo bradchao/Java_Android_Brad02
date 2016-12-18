@@ -73,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
         @JavascriptInterface
         public void getName(String info){
             Message mesg = new Message();
+            Bundle data = new Bundle();
+            data.putString("info", info);
+            mesg.setData(data);
             handler.sendMessage(mesg);
 
             editor.putString("username", info);
@@ -86,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            username.setText("III");
+            String info = msg.getData().getString("info");
+            username.setText(info);
         }
     }
 
