@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
     public class BradJS {
         @JavascriptInterface
         public void getName(String info){
-            Log.d("brad", "getName()");
+            Log.d("brad", "getName():" + info);
+            username.setText(info);
         }
     }
 
