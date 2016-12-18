@@ -36,6 +36,11 @@
             android:onClick="lottery"
             />
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        />
     <WebView
         android:id="@+id/webview"
         android:layout_width="match_parent"

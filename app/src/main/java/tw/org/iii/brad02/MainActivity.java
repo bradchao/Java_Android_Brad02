@@ -7,15 +7,18 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webview;
+    private TextView username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        username = (TextView)findViewById(R.id.username);
         webview = (WebView)findViewById(R.id.webview);
         initWebView();
     }
