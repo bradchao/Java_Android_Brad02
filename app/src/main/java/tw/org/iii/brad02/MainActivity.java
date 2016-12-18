@@ -1,5 +1,6 @@
 package tw.org.iii.brad02;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,11 +14,16 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private WebView webview;
     private TextView username;
+    private SharedPreferences sp;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sp = getSharedPreferences("appdata", MODE_PRIVATE);
+        editor = sp.edit();
 
         username = (TextView)findViewById(R.id.username);
         webview = (WebView)findViewById(R.id.webview);
