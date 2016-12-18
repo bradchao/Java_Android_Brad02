@@ -3,6 +3,10 @@
         var here = document.getElementById('here');
         here.innerHTML = parseInt(Math.random()*49+1);
     }
+    function showName(name){
+        var nameSpan = document.getElementById('name');
+        nameSpan.innerHTML = name;
+    }
 </script>
 <h1 style="background-color:#ff0">Brad Big Company</h1>
 <hr>
@@ -15,3 +19,5 @@ Hello, World<br>
 <div id="here"></div>
 <img src='imgs/android.gif'>
 <hr>
+Welcome, <span id='name'></span>
+

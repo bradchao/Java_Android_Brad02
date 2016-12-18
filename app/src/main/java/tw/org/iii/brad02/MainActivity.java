@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         webview.reload();
     }
     public void lottery(View v){
-        webview.loadUrl("javascript:click1()");
+        //webview.loadUrl("javascript:click1()");
+        String name = "Brad";
+        webview.loadUrl("javascript:showName('" + name + "')");
     }
 }
