@@ -21,13 +21,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initWebView(){
-        WebViewClient client = new WebViewClient();
+        WebViewClient client = new WebViewClient(){
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                String name = "Brad";
+                webview.loadUrl("javascript:showName('" + name + "')");
+
+            }
+        };
         webview.setWebViewClient(client);
 
         WebSettings settings = webview.getSettings();
         settings.setJavaScriptEnabled(true);
 
         webview.loadUrl("file:///android_asset/brad.html");
+
     }
     public void prev(View v){
         webview.goBack();
@@ -39,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         webview.reload();
     }
     public void lottery(View v){
-        //webview.loadUrl("javascript:click1()");
         String name = "Brad";
         webview.loadUrl("javascript:showName('" + name + "')");
     }
