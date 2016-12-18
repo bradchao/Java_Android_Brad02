@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                String name = "Brad";
+                String name = sp.getString("username","guest");
                 webview.loadUrl("javascript:showName('" + name + "')");
 
             }
@@ -68,7 +68,13 @@ public class MainActivity extends AppCompatActivity {
         @JavascriptInterface
         public void getName(String info){
             Log.d("brad", "getName():" + info);
-            username.setText(info);
+            // username.setText(info);
+
+            editor.putString("username", info);
+            editor.commit();
+
+            //Log.d("brad", "==> " +sp.getString("username","ok"));
+
         }
     }
 
