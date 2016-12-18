@@ -7,6 +7,11 @@
         var nameSpan = document.getElementById('name');
         nameSpan.innerHTML = name;
     }
+    function getInput(){
+        var nameSpan = document.getElementById('name');
+        var input = document.getElementById('input');
+        nameSpan.innerHTML = input.value;
+    }
 </script>
 <h1 style="background-color:#ff0">Brad Big Company</h1>
 <hr>
@@ -19,5 +24,7 @@ Hello, World<br>
 <div id="here"></div>
 <img src='imgs/android.gif'>
 <hr>
-Welcome, <span id='name'></span>
+Welcome, <span id='name'></span><hr>
+<input type='text' id='input'>
+<input type='button' value='get' onclick="getInput()">
 
